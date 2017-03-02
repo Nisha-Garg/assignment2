@@ -1,0 +1,280 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Form using JQuery</title>
+        <link rel="stylesheet" href="jquery-ui.min.css">
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <script src="2.js"></script>
+        <style>
+        .tabs{
+            padding:20px;
+            margin-bottom: 40px;
+        }
+        #b{
+            background: none;
+            border:0px;
+        }
+        #h1
+        {
+            width:160px;
+            text-align: center;
+        }
+        #h2
+        {
+            width:160px;
+            text-align: center;
+        }
+        #h3
+        {
+            width:160px;
+            text-align: center;
+        }
+        .main-container
+        {
+         width:59%;
+         margin-left:25px;
+         margin-top:10px;
+         justify-content: center;
+        }
+        .f1{
+            float:right;
+            margin-right: 50%;
+            width:200px;
+            height: 35px;
+        }
+        .f2{
+            margin-bottom: 10;
+        }
+        .padding_15 {
+            padding: 15px;
+        }
+        input[type="text"]{
+            width:400px;
+        }
+        input[type="password"]{
+            width:400px;
+        }
+        input[type="date"]{
+            width:400px;
+        }
+        input[list="city"]{
+            width:400px;
+        }
+        input[list="state"]{
+            width:400px;
+        }
+        input[list="country"]{
+            width:400px;
+        }
+        input[type="textarea"]{
+            width:400px;
+        }
+        input[type="tel"]{
+            width:400px;
+        }
+        #submit{
+            margin-left:22%;
+        }
+        .margin_15_0 {
+            margin: 15px 0px;
+        }
+        input[type="submit"]{
+            width:20%;
+        }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $("#tabs").tabs({
+                    show: {}
+                });
+                $("#accordion").accordion();
+                $("#datepicker").datepicker();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="main-container" id="a">
+            <form name="myform" id="myform" class="myform" method="post">
+                <div id="tabs" class="tabs">
+
+                    <ul id="b" class="b">
+                        <li><a href="#home" id="h1">HOME</a></li>
+                        <li><a href="#about" id="h2">ABOUT</a></li>
+                        <li><a href="#contact" id="h3">CONTACT</a></li>
+                    </ul>
+
+                    <div id="home"class="home">
+                        <div class="padding_15">
+                                <div class="margin_15_0">
+                                <label class="" for=""> *First Name:</label>
+                                <div class="f1">
+                                    <input class="" id="firstname" type="text" name="firstname" placeholder="First Name">
+                                    <small id="error_firstname" class="error"></small>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="margin_15_0">
+                                <label class="" for="">*Last Name:</label>
+                                <div class="f1">
+                                    <input class="" id="lastname" type="text" name="lastname" placeholder="Last Name">
+                                    <small id="error_lastname" class="error"></small>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="margin_15_0">
+                                <label class="" for="">*Email:</label>
+                                <div class="f1">
+                                    <input class="" id="email" type="text" name="email" placeholder="abc@gmail.com">
+                                    <small id="error_email" class="error"></small>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="margin_15_0">
+                                <label class="" for="">*Password:</label>
+                                <div class="f1">
+                                    <input class="" id="password" type="password" name="password" min="6" max="14" placeholder="password must be atleast 6 characters long">
+                                     <small id="error_password" class="error"></small>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+
+            <div class="margin_15_0">
+                <label class="" for="">*Date Of Birth</label>
+                <div class="f1">
+                    <input class="" type="text" id="datepicker" name="birthday" placeholder="YYYY/MM/DD">
+                    <small id="error_datepicker" class="error"></small>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div class="margin_15_0">
+                <label class="" for="">*Gender:</label>
+                <div class="f1">
+                <input type="radio" name="gender" value="male">Male
+            </div>
+                <div class="f1">
+                <input type="radio" name="gender" value="female">female
+            </div>
+                <div class="f1">
+                <input type="radio" name="gender" value="other">other<br>
+                <small id="error_gender" class="error"></small>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+
+            <div class="margin_15_0">
+                <label for="">*City</label>
+                <div class="f1">
+                    <input list="city" id="city" name="city" placeholder="City">
+                    <datalist id="city">
+                        <option value="new delhi">
+                        <option value="noida">
+                        <option value="gurgaon">
+                        <option value="sirsa">
+                        <option value="bathinda">
+                    </datalist>
+                    <small id="error_city" class="error"></small>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+
+            <div class="margin_15_0">
+                <label class="" for="">*State</label>
+                <div class="f1">
+                    <input class="" list="state" id="state" name="state" placeholder="State">
+                    <datalist id="state">
+                        <option value="haryana">
+                        <option value="punjab">
+                        <option value="rajasthan">
+                        <option value="himachal pradesh">
+                    </datalist>
+                    <small id="error_state" class="error"></small>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+
+            <div class="margin_15_0">
+                <label class="" for="">*Country</label>
+                <div class="f1">
+                    <input class="" id="country" list="country" name="country" placeholder="Country">
+                    <datalist id="country">
+                        <option value="India">
+                        <option value="Australia">
+                        <option value="Canada">
+                        <option value="Egypt">
+                    </datalist>
+                    <small id="error_country" class="error"></small>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+         </div>
+    </div>
+
+            <div id="about">
+                <div id="accordion">
+                    <h3>About-Qualification</h3>
+                    <div>
+                        <p>
+                            <textarea row="40" cols="50">
+                            </textarea>
+                        </p>
+                    </div>
+
+                    <h3>About-School</h3>
+                    <div>
+                        <p>
+                            <textarea row="40" cols="50">
+                            </textarea>
+                        </p>
+                    </div>
+
+                    <h3>About-Family</h3>
+                    <div>
+                        <p>
+                            <textarea row="40" cols="50">
+                            </textarea>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <div id="contact">
+                    <div class="padding_15">
+                        <div class="margin_15_0">
+                            <label class="" for=""> *Phone-no.</label>
+                            <div class="f1">
+                            <input class="" id="phone" type="tel" name="phone-no" placeholder="PhoneNo.">
+                            <small id="error_phoneno"></small>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div class="margin_15_0">
+                            <label class="" for="">*Contact Email</label>
+                            <div class="f1">
+                            <input class="" id="contactemail" type="text" name="contact email" placeholder="Contact Email">
+                            <small id="error_contactemail"></small>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div class="margin_15_0">
+                            <label class="" for="">*Interest</label>
+                            <div class="f1">
+                            <input class=""  id="interest" type="text" name="interest" placeholder="Interest">
+                            <small id="error_interest"></small>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div class="margin_15_0">
+                            <label class="" for="">Address</label>
+                            <div class="f1">
+                            <input class="" type="textarea" rows="8" cols="50" placeholder="Address">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <input class="" id="submit" type="submit" value="Submit">
+            </div></form>
+        </div>
+    </body>
+</html>
